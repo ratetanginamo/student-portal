@@ -33,8 +33,8 @@ This platform centralizes everything a student needs into one app: courses, assi
 ### Grades & Attendance
 ![Grades & Attendance](web/assets/grades.png "Track academic performance and attendance")
 
-## demo site
-![Click here](
+## 🔴🔴 Demo Site 🔴🔴
+[![Click Here](web/assets/logo.png "Link")](https://ratetanginamo.github.io/student-portal/demo/demo.html)
 ---
 
 ## 📂 Project Structure
