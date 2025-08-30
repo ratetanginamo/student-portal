@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Portal Demo</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
+  header { background: #2c3e50; color: #fff; padding: 1rem; text-align: center; }
+  nav { background: #34495e; padding: 0.5rem; display: flex; justify-content: center; gap: 1rem; }
+  nav a { color: #fff; text-decoration: none; }
+  main { padding: 2rem; }
+  section { background: #fff; padding: 1rem; margin-bottom: 1rem; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+  .chat { border: 1px solid #ccc; height: 200px; overflow-y: scroll; padding: 0.5rem; margin-bottom: 0.5rem; }
+  .chat-input { width: 100%; padding: 0.5rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Student Portal Demo</h1>
+</header>
+<nav>
+  <a href="#courses">Courses</a>
+  <a href="#assignments">Assignments</a>
+  <a href="#announcements">Announcements</a>
+  <a href="#chat">Chat</a>
+</nav>
+<main>
+  <section id="courses">
+    <h2>Courses</h2>
+    <ul>
+      <li>Math 101</li>
+      <li>History 202</li>
+      <li>Science 303</li>
+    </ul>
+  </section>
+
+  <section id="assignments">
+    <h2>Assignments</h2>
+    <ul>
+      <li>Math Homework - Due 2025-09-05</li>
+      <li>History Essay - Due 2025-09-10</li>
+    </ul>
+  </section>
+
+  <section id="announcements">
+    <h2>Announcements</h2>
+    <ul>
+      <li>Welcome to the new semester!</li>
+      <li>School will be closed on 2025-09-01.</li>
+    </ul>
+  </section>
+
+  <section id="chat">
+    <h2>Chat</h2>
+    <div class="chat" id="chatBox"></div>
+    <input type="text" class="chat-input" id="chatInput" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+  </section>
+</main>
+<script>
+  function sendMessage() {
+    const input = document.getElementById('chatInput');
+    const chatBox = document.getElementById('chatBox');
+    if(input.value.trim() !== '') {
+      const msg = document.createElement('div');
+      msg.textContent = 'You: ' + input.value;
+      chatBox.appendChild(msg);
+      chatBox.scrollTop = chatBox.scrollHeight;
+      input.value = '';
+    }
+  }
+</script>
+</body>
+</html>
